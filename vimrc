@@ -1,5 +1,21 @@
 set nocompatible        " be iMproved
 filetype off            " Needed by vundle
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'klen/python-mode'       " Python mode plugin
+Plugin 'kien/ctrlp.vim'         " Control-P plugin         
+Plugin 'scrooloose/nerdtree'    " NERDTree
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+
 syntax enable
 set tabstop=4		    " number of visual spaces per tab
 set softtabstop=4 	    " number of spaces in tab when editing
@@ -49,3 +65,4 @@ nnoremap <leader>u :GundoToggle<CR>
 "" Python
 " Enable all Python syntax highlighting
 let python_highlight_all = 1
+let g:pymode=1
